@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BudgetLens — Expense Tracker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="#top" class="logo">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="12" cy="12" r="10" fill="#2E4F2B"/>
+    <text x="12" y="16.5" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#C97B4A" text-anchor="middle">$</text>
+  </svg>
+  Budget<span>Lens</span>
+</a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav">
+      <span></span><span></span><span></span>
+      <span class="sr-only">Menu</span>
+    </button>
+    <nav class="primary-nav" id="primaryNav">
+      <a href="#overview">Overview</a>
+      <a href="#log">Log Expense</a>
+      <a href="#budget">Budget</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top" class="wrap">
+
+<section class="hero">
+  <p class="eyebrow">Personal Finance, Simplified</p>
+  <h1>Know where your money goes, before the month ends.</h1>
+  <p class="hero-sub">BudgetLens is a lightweight expense tracker built to help you log daily spending, set a monthly budget, and see exactly which categories eat up your money — all stored privately on your own device, no sign-up required.</p>
+</section>
+
+  <section id="overview" class="stats-grid">
+    <div class="stat-card">
+      <span class="stat-label">Spent This Month</span>
+      <span class="stat-value" id="monthTotal">$0</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-label">Transactions</span>
+      <span class="stat-value" id="txCount">0</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-label">Top Category</span>
+      <span class="stat-value" id="topCategory">—</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-label">Remaining Budget</span>
+      <span class="stat-value" id="remainingBudget">$0</span>
+    </div>
+  </section>
+
+  <div class="layout-split">
+    <section id="log" class="panel">
+      <h2>Log an Expense</h2>
+      <form id="expenseForm" class="expense-form">
+        <input type="date" id="expDate" required>
+        <select id="expCategory" required>
+          <option value="" disabled selected>Category</option>
+          <option>Food</option>
+          <option>Transport</option>
+          <option>Bills</option>
+          <option>Shopping</option>
+          <option>Other</option>
+        </select>
+        <input type="number" id="expAmount" placeholder="Amount ($)" step="0.01" min="0.01" required>
+        <input type="text" id="expNote" placeholder="Note (optional)">
+        <button type="submit" class="btn btn-primary">Add Expense</button>
+      </form>
+
+      <h2>Recent Transactions</h2>
+      <ul class="tx-list" id="txList"></ul>
+    </section>
+
+    <aside id="budget" class="sidebar">
+      <h2>Monthly Budget</h2>
+      <p class="goal-text"><span id="spentOfBudget">$0</span> / <span id="budgetLimitLabel">$500</span></p>
+      <div class="progress-bar"><div class="progress-fill" id="budgetProgress"></div></div>
+      <div class="budget-set">
+        <input type="number" id="budgetInput" placeholder="Set budget" min="1">
+        <button id="setBudgetBtn" class="btn btn-ghost">Set</button>
+      </div>
+
+      <h2>By Category</h2>
+      <div id="catBreakdown" class="cat-breakdown"></div>
+    </aside>
+  </div>
+
+</main>
+
+<footer class="site-footer wrap">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <strong>BudgetLens</strong>
+      <p>A simple expense tracker — built for Decode Labs, Project 1.</p>
+    </div>
+    <p class="footer-meta">&copy; 2026 Maheen. All data stored locally on your device.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
