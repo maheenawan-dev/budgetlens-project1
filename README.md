@@ -5,7 +5,7 @@ A responsive, mobile-first expense tracking dashboard built with vanilla HTML, C
 Built as **Project 1** for the Full Stack Development track at Decode Labs.
 
 ## 🔗 Live Demo
-*(Add your GitHub Pages / deployment link here once hosted)*
+*https://maheenawan-dev.github.io/budgetlens-project1/*
 
 ## 📋 Overview
 
