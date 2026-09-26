@@ -40,7 +40,7 @@ BudgetLens lets users log daily expenses, set a monthly budget, and track spendi
 
 1. Clone the repository
 ```bash
-   git clone https://github.com/YOUR-USERNAME/budgetlens-project1.git
+   git clone https://github.com/maheenawan-dev/budgetlens-project1
 ```
 2. Open `index.html` in your browser — no build steps or dependencies required
 
