@@ -46,12 +46,13 @@ BudgetLens lets users log daily expenses, set a monthly budget, and track spendi
 
 ## 📂 Project Structure
 
+```text
 budgetlens-project1/
 ├── index.html
 ├── style.css
 ├── script.js
 └── README.md
-
+```
 
 ## 📖 What I Learned
 
